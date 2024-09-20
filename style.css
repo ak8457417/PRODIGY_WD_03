@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 65px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    border-bottom: 3px solid #ffaf7b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    gap: 5px;
+}
+
+.cell {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f1f1f1;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 10px;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.game-info {
+    margin-top: 30px;
+    text-align: center;
+    color: #f1f1f1;
+}
+
+.game-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.info {
+    font-size: 1.8rem;
+}
+
+#reset {
+    margin: 15px;
+    padding: 10px 25px;
+    background-color: #ffaf7b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#reset:hover {
+    background-color: #ff8a5b;
+    transform: scale(1.05);
+}
+
+.image-box img {
+    width: 0;
+    transition: width 1s cubic-bezier(0.77, 0, 0.175, 1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
